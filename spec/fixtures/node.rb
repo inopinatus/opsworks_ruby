@@ -81,7 +81,8 @@ DEFAULT_NODE = {
     },
     appserver: {
       adapter: 'unicorn',
-      worker_processes: 8
+      worker_processes: 8,
+      after_deploy: 'stop-start'
     },
     webserver: {
       adapter: 'nginx',
